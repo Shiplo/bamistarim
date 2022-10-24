@@ -5,7 +5,7 @@ function About() {
   return (
     <div>
         <Header />
-        <h1>About Page</h1>
+        <h1 className="p-4 bg-white">About Page</h1>
     </div>
   )
 }

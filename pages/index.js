@@ -10,7 +10,7 @@ export default function Index() {
       </Head>
 
       <main className="main">
-        <h1>Home Page</h1>
+        <h1 className="p-4 text-cyan-300">Home Page</h1>
       </main>
     </div>
   )

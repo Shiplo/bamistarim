@@ -1,0 +1,22 @@
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+@layer base {
+    @font-face {
+        font-family: 'ArbelG-Regular';
+        src: url('../../public/fonts/ArbelG-Medium.eot');
+        src: url('../../public/fonts/ArbelG-Regular.eot') format('embedded-opentype'),
+             url('../../public/fonts/ArbelG-Regular.woff2') format('woff2'),
+             url('../../public/fonts/ArbelG-Regular.woff') format('woff'),
+             url('../../public/fonts/ArbelG-Regular.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'ArbelG-Medium';
+        src: url('../../public/fonts/ArbelG-Medium.eot');
+        src: url('../../public/fonts/ArbelG-Medium.eot') format('embedded-opentype'),
+             url('../../public/fonts/ArbelG-Medium.woff2') format('woff2'),
+             url('../../public/fonts/ArbelG-Medium.woff') format('woff'),
+             url('../../public/fonts/ArbelG-Medium.ttf') format('truetype');
+    }
+}
