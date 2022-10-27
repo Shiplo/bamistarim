@@ -32,7 +32,7 @@ export default function Index() {
   }, []);
 
   return (
-    <Layout header='hide' footer='hide'>
+    <Layout header='hide' footer='hide' mainDir='ltr'>
       <section ref={vcontainer} className={`vertical-wrapper h-screen flex flex-nowrap flex-row-reverse ${styles.container}`} id='vertical-scroll'>
         <div className={`v-section h-full w-screen flex content-center justify-center ${styles.color1}`}>
           <Landing />

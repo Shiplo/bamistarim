@@ -2,8 +2,9 @@ import Head from 'next/head'
 import React from 'react'
 import Footer from './footer/footer'
 import Header from './header/header'
+import styles from './layout.module.scss'
 
-const  Layout = ({ children, header, footer }) => {
+const  Layout = ({ children, header, footer, mainDir }) => {
   //console.log(header, footer);
   return (
     <div className="body">
@@ -17,7 +18,7 @@ const  Layout = ({ children, header, footer }) => {
         <Header />
       )}
 
-      <main className="main max-w-full overflow-hidden">
+      <main className={`main max-w-full overflow-hidden ${mainDir == 'ltr' ? styles.dirLtr : styles.dirRtl}`} >
         { children }
       </main>
 

@@ -1,6 +1,7 @@
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
+@import "variables.module.scss";
 
 @layer base {
     @font-face {
@@ -19,4 +20,25 @@
              url('../../public/fonts/ArbelG-Medium.woff') format('woff'),
              url('../../public/fonts/ArbelG-Medium.ttf') format('truetype');
     }
+    @font-face {
+        font-family: 'Cooperative-Regular';
+        src: url('../../public/fonts/cooperative-regular.eot');
+        src: url('../../public/fonts/cooperative-regular.eot') format('embedded-opentype'),
+             url('../../public/fonts/cooperative-regular.woff2') format('woff2'),
+             url('../../public/fonts/cooperative-regular.woff') format('woff'),
+             url('../../public/fonts/cooperative-regular.ttf') format('truetype'),
+             url("../../public/fonts/cooperative-regular.svg#Cooperative-Regular") format("svg");
+    }
+}
+
+body {
+    font-family: 'ArbelG-Regular';
+    font-size: 1.2em;
+    line-height: 1.4em;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+.title-font {
+    font-family: $titleFont;
 }
