@@ -3,7 +3,8 @@ import React from 'react'
 import Footer from './footer/footer'
 import Header from './header/header'
 
-const  Layout = ({ children }) => {
+const  Layout = ({ children, header, footer }) => {
+  //console.log(header, footer);
   return (
     <div className="body">
       <Head>
@@ -12,13 +13,17 @@ const  Layout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Header />
+      {header == 'hide' ? '' : (
+        <Header />
+      )}
 
-      <main className="main">
+      <main className="main max-w-full overflow-hidden">
         { children }
       </main>
 
-      <Footer />
+      {footer == 'hide' ? '' : (
+        <Footer />
+      )}
     </div>
   )
 }
