@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, transform } from "framer-motion"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import styles from "./landing.module.scss"
 import logo from '../../../../public/images/logo.png';
 import arrow from '../../../../public/images/arrow-left.png';
@@ -14,12 +15,12 @@ function Landing() {
     <>
         <div className='section-bg fixed top-0 left-0 w-full h-full z-10'>
             <div className='bg-image absolute top-0 left-0 w-full h-full z-auto'>
-                <motion.img 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                transition={{duration: 0.5 }}
+                <LazyLoadImage 
                 className='object-cover object-center w-full h-full' 
-                src={bgImage.src} alt="Section BG" />
+                src={bgImage.src} 
+                height={bgImage.height} 
+                width={bgImage.width}
+                alt="Section BG" />
             </div>
             <motion.div 
             initial={{ x: "-15%" }} 

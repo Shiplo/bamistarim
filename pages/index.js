@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import styles from '../src/styles/home.module.scss'
 import Landing from '../src/components/home/landing'
+import Section1 from '../src/components/home/section1'
 
 
 export default function Index() {
@@ -34,10 +35,12 @@ export default function Index() {
   return (
     <Layout header='hide' footer='hide' mainDir='ltr'>
       <section ref={vcontainer} className={`vertical-wrapper h-screen flex flex-nowrap flex-row-reverse ${styles.container}`} id='vertical-scroll'>
-        <div className={`v-section h-full w-screen flex content-center justify-center ${styles.color1}`}>
+        <div className={`v-section h-full w-screen flex content-center overflow-hidden justify-center ${styles.color1} ${styles.section}`}>
           <Landing />
         </div>
-        <div className='v-section h-full w-screen bg-red-500'></div>
+        <div className={`v-section h-full w-screen flex content-center justify-center ${styles.color2}`}>
+          <Section1 />
+        </div>
         <div className='v-section h-full w-screen bg-lime-500'></div>
         <div className='v-section h-full w-screen bg-sky-500'></div>
       </section>

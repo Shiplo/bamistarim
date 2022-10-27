@@ -1,7 +1,15 @@
+@import "../styles/variables.module.scss";
+
 .container {
 	width: 400vw;
 	direction: ltr;
 }
+.section {
+	direction: rtl;
+}
 .color1 {
 	background-color: #223A57;
+}
+.color2 {
+	background-color: $secondaryColor;
 }
