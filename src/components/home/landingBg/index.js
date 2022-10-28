@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { motion, transform } from "framer-motion"
 import styles from "./landingBg.module.scss"
@@ -20,7 +21,8 @@ function LandingBg({data}) {
             animate={{ x: "0" }} 
             transition={{duration: 1 }}
             className={`absolute left-0 top-0 w-auto z-10 ${styles.float1}`}>
-                <img className={'block'} 
+                <Image 
+                className={'block'} 
                 src={data.float1.src} 
                 height={data.float1.height} 
                 width={data.float1.width}
@@ -31,7 +33,8 @@ function LandingBg({data}) {
             animate={{ y: "0" }} 
             transition={{duration: 1 }}
             className={`absolute left-0 bottom-0 w-auto z-10 ${styles.float2}`}>
-                <img className={'block'} 
+                <Image 
+                className={'block'} 
                 src={data.float2.src} 
                 height={data.float2.height} 
                 width={data.float2.width}
@@ -42,7 +45,8 @@ function LandingBg({data}) {
             animate={{ x: "0" }} 
             transition={{duration: 1 }}
             className={`absolute right-0 top-0 w-auto z-10 ${styles.float3}`}>
-                <img className={'block'} 
+                <Image 
+                className={'block'} 
                 src={data.float3.src} 
                 height={data.float3.height} 
                 width={data.float3.width}

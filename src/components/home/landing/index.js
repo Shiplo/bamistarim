@@ -52,8 +52,8 @@ function Landing() {
             animate={{ opacity: 1, y: "0%" }} 
             transition={{duration: 0.5 }}
             onClick={() => nextSection()}
-            className={`next-section bg-white w-12 h-12 md:w-10 md:h-10 text-center rounded-full ${styles.button}`}>
-                <img 
+            className={`next-section ml-auto mr-auto flex items-center justify-center bg-white w-12 h-12 md:w-10 md:h-10 text-center rounded-full ${styles.button}`}>
+                <Image 
                 width={arrow.width}
                 height={arrow.height}
                 className={`inline-block ${styles.iconImage}`} src={arrow.src} alt="<-" />

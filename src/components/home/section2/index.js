@@ -21,8 +21,8 @@ function Section2() {
             </div>
             
             <button className={`${styles.button}`}>
-                <span className={styles.icon} style={{backgroundImage: `url(${buttonBg.src})`}}>
-                    <img 
+                <span className={`flex items-center justify-center ${styles.icon}`} style={{backgroundImage: `url(${buttonBg.src})`}}>
+                    <Image 
                     width={arrow.width}
                     height={arrow.height}
                     className={`inline-block ${styles.image}`} src={arrow.src} alt="<-" />

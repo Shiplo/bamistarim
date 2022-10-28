@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: 'build',
   reactStrictMode: false,
   swcMinify: true,
   images: {
@@ -27,4 +26,8 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   }
+}
+
+module.exports = {
+  distDir: 'build',
 }
