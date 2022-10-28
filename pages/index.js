@@ -5,6 +5,8 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import styles from '../src/styles/home.module.scss'
 import Landing from '../src/components/home/landing'
 import Section1 from '../src/components/home/section1'
+import Section2 from '../src/components/home/section2'
+import Section3 from '../src/components/home/section3'
 
 
 export default function Index() {
@@ -38,11 +40,15 @@ export default function Index() {
         <div className={`v-section h-full w-screen flex content-center overflow-hidden justify-center ${styles.color1} ${styles.section}`}>
           <Landing />
         </div>
-        <div className={`v-section h-full w-screen flex content-center justify-center ${styles.color2}`}>
+        <div className={`v-section h-full w-screen flex content-center overflow-hidden justify-center ${styles.color2}`}>
           <Section1 />
         </div>
-        <div className='v-section h-full w-screen bg-lime-500'></div>
-        <div className='v-section h-full w-screen bg-sky-500'></div>
+        <div className={`v-section h-full w-screen flex content-center overflow-hidden justify-center ${styles.color2}`}>
+          <Section2 />
+        </div>
+        <div className={`v-section h-full w-screen flex content-center overflow-hidden justify-center ${styles.color2}`}>
+          <Section3 />
+        </div>
       </section>
     </Layout>
   )

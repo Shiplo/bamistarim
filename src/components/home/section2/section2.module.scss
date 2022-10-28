@@ -1,0 +1,73 @@
+.wrapper {
+    width: 1260px;
+    max-width: 90%;
+    margin: auto 0px;
+
+    .button {
+        display: flex;
+        margin-right: auto;
+        font-size: 28px;
+        line-height: 35px;
+        color: #223A57;
+        margin-top: 5vh;
+        align-items: center;
+
+        .icon {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            line-height: 50px;
+            border-radius: 100px;
+            position: relative;
+            margin-right: 15px;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: 3px;
+                bottom: 3px;
+                right: 3px;
+                border: 2px solid #4A5A72;
+                border-radius: 100px;
+            }
+        }
+    }
+}
+
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .wrapper {
+        .button {
+            font-size: 22px;
+            line-height: 30px;
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                margin-right: 10px;
+
+                &:after {
+                    border-width: 1px;
+                }
+
+                .image {
+                    max-width: 20px;
+                }
+            }
+        }
+    }
+    
+}
+    
+  
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+
+ 
+
+}
