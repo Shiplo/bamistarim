@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import bgImage from '../../../../public/images/home-section3.jpg';
 import SectionBg from '../sectionBg';
 import styles from './section3.module.scss';
@@ -24,7 +25,10 @@ function Section3() {
               </div>
               <button className={`${styles.button}`}>
                   <span className={styles.icon} style={{backgroundImage: `url(${buttonBg.src})`}}>
-                      <img className={`inline-block ${styles.image}`} src={arrow.src} alt="<-" />
+                      <img 
+                      width={arrow.width}
+                      height={arrow.height}
+                      className={`inline-block ${styles.image}`} src={arrow.src} alt="<-" />
                   </span>
                   <span className='text'>רוצים  לפגוש עוד סיפורים?</span>
               </button>
@@ -39,7 +43,10 @@ function Section3() {
                   <button className={`flex items-center justify-end rounded mb-2.5 w-full bg-white hover:bg-stone-200 transition-all ${styles.infoButton}`} >
                     <span className={styles.infoText}>עדויות של ניצולים</span>
                     <span className={styles.infoIcon}>
-                      <img className={`inline-block ${styles.infoImage}`} src={icon1.src} alt="“" />
+                      <img 
+                      width={icon1.width}
+                      height={icon1.height}
+                      className={`inline-block ${styles.infoImage}`} src={icon1.src} alt="“" />
                     </span>
                   </button>
                 </div>
@@ -47,7 +54,10 @@ function Section3() {
                   <button className={`flex items-center justify-end rounded w-full bg-white hover:bg-stone-200 transition-all ${styles.infoButton}`} >
                     <span className={styles.infoText}>שאלות לסקרנים</span>
                     <span className={styles.infoIcon}>
-                      <img className={`inline-block ${styles.infoImage}`} src={icon2.src} alt="“" />
+                      <img 
+                      width={icon2.width}
+                      height={icon2.height}
+                      className={`inline-block ${styles.infoImage}`} src={icon2.src} alt="“" />
                     </span>
                   </button>
                 </div>

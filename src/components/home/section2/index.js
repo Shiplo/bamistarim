@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 import bgImage from '../../../../public/images/home-section3.jpg';
 import SectionBg from '../sectionBg';
 import styles from './section2.module.scss';
@@ -21,7 +22,10 @@ function Section2() {
             
             <button className={`${styles.button}`}>
                 <span className={styles.icon} style={{backgroundImage: `url(${buttonBg.src})`}}>
-                    <img className={`inline-block ${styles.image}`} src={arrow.src} alt="<-" />
+                    <img 
+                    width={arrow.width}
+                    height={arrow.height}
+                    className={`inline-block ${styles.image}`} src={arrow.src} alt="<-" />
                 </span>
                 <span className='text'>רוצים  לפגוש עוד סיפורים?</span>
             </button>

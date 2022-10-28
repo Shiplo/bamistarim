@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'build',
   reactStrictMode: false,
   swcMinify: true,
   images: {
     loader: "akamai",
     path: "",
   }
+  
 }
 
 module.exports = nextConfig

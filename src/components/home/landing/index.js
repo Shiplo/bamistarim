@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 import { motion, transform } from "framer-motion"
 import styles from "./landing.module.scss"
 import logo from '../../../../public/images/logo.png';
@@ -19,7 +20,7 @@ function Landing() {
         "bgMask": bgMask
     }
     function nextSection() {
-        
+
     }
 
   return (
@@ -27,6 +28,8 @@ function Landing() {
         <LandingBg data={bgData} />
         <div className='landing-wrapper m-auto relative z-20 text-center'>
             <motion.img 
+            width={logo.width}
+            height={logo.height}
             initial={{ opacity: 0, y: "100%" }}
             animate={{ opacity: 1, y: "0%" }} 
             transition={{duration: 0.5 }}
@@ -50,7 +53,10 @@ function Landing() {
             transition={{duration: 0.5 }}
             onClick={() => nextSection()}
             className={`next-section bg-white w-12 h-12 md:w-10 md:h-10 text-center rounded-full ${styles.button}`}>
-                <img className={`inline-block ${styles.iconImage}`} src={arrow.src} alt="<-" />
+                <img 
+                width={arrow.width}
+                height={arrow.height}
+                className={`inline-block ${styles.iconImage}`} src={arrow.src} alt="<-" />
             </motion.button>
         </div>
     </>
