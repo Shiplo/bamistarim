@@ -1,0 +1,147 @@
+@import "../../../styles/variables.module.scss";
+
+.nav {
+
+    .navList {
+
+        li {
+            a {
+                width: 34px;
+                height: 34px;
+
+                &:hover {
+                    .hover {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    .marker {
+                        transform: scale(1.4);
+                    }
+                    .tooltip {
+                        opacity: 1;
+                        .tiptext {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 2.5vh;
+            }
+            &:nth-child(1) {
+                a {
+                    &:hover {
+                        .tooltip {
+                            width: 140px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    &:hover {
+                        .tooltip {
+                            width: 82px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    &:hover {
+                        .tooltip {
+                            width: 77px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(4) {
+                a {
+                    &:hover {
+                        .tooltip {
+                            width: 81px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(5) {
+                a {
+                    &:hover {
+                        .tooltip {
+                            width: 75px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(6) {
+                a {
+                    &:hover {
+                        .tooltip {
+                            width: 65px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .marker {
+            width: 18px;
+            height: 18px;
+            background: #FFFFFF;
+            border: 2px solid #93A0C1;
+            margin-left: -9px;
+            margin-top: -9px;
+        }
+        .hover {
+            transform: scale(0.5);
+            opacity: 0;
+            background-color: $themeColor;
+
+            span {
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                border-width: 2px;
+            }
+        }
+        .tooltip {
+            background-color: $themeColor;
+            color: #fff;
+            font-size: 14px;
+            line-height: 30px;
+            padding: 0px 15px;
+            width: max-content;
+            width: 34px;
+            vertical-align: middle;
+            opacity: 0;
+
+            .tipbg {
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+            }
+
+            .tiptext {
+                top: 2px;
+                left: 2px;
+                opacity: 0;
+            }
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            background-color: $themeColor;
+            width: 2px;
+            height: auto;
+            position: absolute;
+            top: 8px;
+            bottom: 8px;
+            left: 50%;
+            margin-left: -1px;
+            z-index: 10;
+        }
+    }
+}

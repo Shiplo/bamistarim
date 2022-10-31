@@ -5,7 +5,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 6546:
+/***/ 8219:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -20,6 +20,10 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(997);
 ;// CONCATENATED MODULE: external "@apollo/client"
 const client_namespaceObject = require("@apollo/client");
+;// CONCATENATED MODULE: external "next/router"
+const router_namespaceObject = require("next/router");
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(6689);
 ;// CONCATENATED MODULE: ./src/apollo/client.js
 
 const defaultOptions = {
@@ -46,21 +50,64 @@ const client = new client_namespaceObject.ApolloClient({
 });
 /* harmony default export */ const apollo_client = (client);
 
+;// CONCATENATED MODULE: ./src/components/loader/index.js
+
+function Loader() {
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        className: "loader fixed top-0 left-0 w-screen h-screen",
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: "lds-ripple absolute top-1/2 left-1/2 -ml-10 -mt-10",
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {}),
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {})
+            ]
+        })
+    });
+}
+/* harmony default export */ const loader = (Loader);
+
 ;// CONCATENATED MODULE: ./pages/_app.js
 
 
 
 
+
+
+
 function MyApp({ Component , pageProps  }) {
-    return /*#__PURE__*/ jsx_runtime_.jsx(client_namespaceObject.ApolloProvider, {
-        client: apollo_client,
-        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-            ...pageProps
+    const { 0: loading , 1: setLoading  } = (0,external_react_.useState)(true);
+    setTimeout(()=>setLoading(false), 1000);
+    const router = (0,router_namespaceObject.useRouter)();
+    (0,external_react_.useEffect)(()=>{
+        router.events.on("routeChangeStart", ()=>setLoading(true));
+        router.events.on("routeChangeComplete", ()=>setTimeout(()=>setLoading(false), 1000));
+        router.events.on("routeChangeError", ()=>setTimeout(()=>setLoading(false), 1000));
+        return ()=>{
+            router.events.off("routeChangeStart", ()=>setLoading(true));
+            router.events.off("routeChangeComplete", ()=>setTimeout(()=>setLoading(false), 1000));
+            router.events.off("routeChangeError", ()=>setTimeout(()=>setLoading(false), 1000));
+        };
+    }, [
+        router.events
+    ]);
+    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: loading ? /*#__PURE__*/ jsx_runtime_.jsx(loader, {}) : /*#__PURE__*/ jsx_runtime_.jsx(client_namespaceObject.ApolloProvider, {
+            client: apollo_client,
+            children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+                ...pageProps
+            })
         })
     });
 }
 /* harmony default export */ const _app = (MyApp);
 
+
+/***/ }),
+
+/***/ 6689:
+/***/ ((module) => {
+
+module.exports = require("react");
 
 /***/ }),
 
@@ -78,7 +125,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(6546));
+var __webpack_exports__ = (__webpack_exec__(8219));
 module.exports = __webpack_exports__;
 
 })();

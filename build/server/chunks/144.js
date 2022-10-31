@@ -67,6 +67,7 @@ module.exports = {
 module.exports = {
 	"wrapper": "section3_wrapper__Tcx7q",
 	"button": "section3_button__QdjAE",
+	"link": "section3_link__nNIhP",
 	"icon": "section3_icon__FTelI",
 	"title": "section3_title__ZE7OX",
 	"content": "section3_content__NuGxA",
@@ -256,8 +257,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6197);
-/* harmony import */ var _landing_module_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(5651);
-/* harmony import */ var _landing_module_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_landing_module_scss__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _landing_module_scss__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(5651);
+/* harmony import */ var _landing_module_scss__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_landing_module_scss__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _public_images_logo_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(846);
 /* harmony import */ var _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7037);
 /* harmony import */ var _public_images_home_section1_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5141);
@@ -266,8 +267,13 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _public_images_bg_float3_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(5781);
 /* harmony import */ var _public_images_bg_mask1_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(1431);
 /* harmony import */ var _landingBg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(7769);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _landingBg__WEBPACK_IMPORTED_MODULE_11__]);
-([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _landingBg__WEBPACK_IMPORTED_MODULE_11__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(4287);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var gsap_dist_ScrollTrigger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4965);
+/* harmony import */ var gsap_dist_ScrollTrigger__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(gsap_dist_ScrollTrigger__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(3015);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _landingBg__WEBPACK_IMPORTED_MODULE_11__, swiper_react__WEBPACK_IMPORTED_MODULE_14__]);
+([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _landingBg__WEBPACK_IMPORTED_MODULE_11__, swiper_react__WEBPACK_IMPORTED_MODULE_14__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -280,6 +286,10 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([fram
 
 
 
+
+
+
+// Import Swiper Use
 
 function Landing() {
     const bgData = {
@@ -289,7 +299,10 @@ function Landing() {
         "float3": _public_images_bg_float3_png__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z,
         "bgMask": _public_images_bg_mask1_png__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Z
     };
-    function nextSection() {}
+    // Swiper 
+    const swiper = (0,swiper_react__WEBPACK_IMPORTED_MODULE_14__.useSwiper)();
+    // GSAP Split text
+    //gsap.registerPlugin(SplitText);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_landingBg__WEBPACK_IMPORTED_MODULE_11__/* ["default"] */ .Z, {
@@ -312,7 +325,7 @@ function Landing() {
                         transition: {
                             duration: 0.5
                         },
-                        className: `inline-block ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_12___default().logo)}`,
+                        className: `inline-block ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_15___default().logo)}`,
                         src: _public_images_logo_png__WEBPACK_IMPORTED_MODULE_4__/* ["default"].src */ .Z.src,
                         alt: "םירתסמב"
                     }),
@@ -328,7 +341,7 @@ function Landing() {
                         transition: {
                             duration: 0.5
                         },
-                        className: `title-font text-white ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_12___default().title)}`,
+                        className: `title-font text-white ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_15___default().title)}`,
                         children: "םירתסמב"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.h2, {
@@ -343,7 +356,7 @@ function Landing() {
                         transition: {
                             duration: 0.5
                         },
-                        className: `title-font text-5xl ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_12___default().subtitle)}`,
+                        className: `title-font text-5xl ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_15___default().subtitle)}`,
                         children: "האושה תפוקתב רותסמ ידלי לש םרופיס"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.button, {
@@ -358,12 +371,12 @@ function Landing() {
                         transition: {
                             duration: 0.5
                         },
-                        onClick: ()=>nextSection(),
-                        className: `next-section ml-auto mr-auto flex items-center justify-center bg-white w-12 h-12 md:w-10 md:h-10 text-center rounded-full ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_12___default().button)}`,
+                        onClick: ()=>swiper.slideNext(),
+                        className: `next-section ml-auto mr-auto flex items-center justify-center bg-white w-12 h-12 md:w-10 md:h-10 text-center rounded-full ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_15___default().button)}`,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                             width: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].width */ .Z.width,
                             height: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].height */ .Z.height,
-                            className: `inline-block ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_12___default().iconImage)}`,
+                            className: `inline-block ${(_landing_module_scss__WEBPACK_IMPORTED_MODULE_15___default().iconImage)}`,
                             src: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].src */ .Z.src,
                             alt: "<-"
                         })
@@ -519,14 +532,15 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6197);
 /* harmony import */ var react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9252);
 /* harmony import */ var react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _section1_module_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6183);
-/* harmony import */ var _section1_module_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_section1_module_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _section1_module_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(6183);
+/* harmony import */ var _section1_module_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_section1_module_scss__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7037);
 /* harmony import */ var _public_images_home_section2_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2073);
 /* harmony import */ var _public_images_button_bg_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9246);
 /* harmony import */ var _sectionBg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(7164);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _sectionBg__WEBPACK_IMPORTED_MODULE_8__]);
-([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _sectionBg__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(3015);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _sectionBg__WEBPACK_IMPORTED_MODULE_8__, swiper_react__WEBPACK_IMPORTED_MODULE_9__]);
+([framer_motion__WEBPACK_IMPORTED_MODULE_3__, _sectionBg__WEBPACK_IMPORTED_MODULE_8__, swiper_react__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -536,48 +550,53 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([fram
 
 
 
+
+// Import Swiper Use
 
 function Section1() {
     const bgData = {
         "bgImage": _public_images_home_section2_jpg__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z
     };
+    // Swiper 
+    const swiper = (0,swiper_react__WEBPACK_IMPORTED_MODULE_9__.useSwiper)();
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_sectionBg__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {
                 data: bgData
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: `section-wrapper relative z-20 ${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_9___default().wrapper)}`,
+                className: `section-wrapper relative z-20 ${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_10___default().wrapper)}`,
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                        className: (_section1_module_scss__WEBPACK_IMPORTED_MODULE_9___default().title),
+                        className: (_section1_module_scss__WEBPACK_IMPORTED_MODULE_10___default().title),
                         children: "נעים מאד,"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: (_section1_module_scss__WEBPACK_IMPORTED_MODULE_9___default().content),
+                        className: (_section1_module_scss__WEBPACK_IMPORTED_MODULE_10___default().content),
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                             children: "אנחנו רוז ושרה. יש לנו סיפור מיוחד שאנחנו מתרגשות לספר. הוא מתחיל על האניה בדרך לארץ ישראל..."
                         })
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
-                        className: `${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_9___default().button)}`,
+                        onClick: ()=>swiper.slideNext(),
+                        className: `${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_10___default().button)}`,
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                className: `flex items-center justify-center ${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_9___default().icon)}`,
+                                className: "text",
+                                children: "לסיפור שלנו"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                className: `flex items-center justify-center ${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_10___default().icon)}`,
                                 style: {
                                     backgroundImage: `url(${_public_images_button_bg_png__WEBPACK_IMPORTED_MODULE_7__/* ["default"].src */ .Z.src})`
                                 },
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                     width: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].width */ .Z.width,
                                     height: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].height */ .Z.height,
-                                    className: `inline-block ${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_9___default().image)}`,
+                                    className: `inline-block ${(_section1_module_scss__WEBPACK_IMPORTED_MODULE_10___default().image)}`,
                                     src: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].src */ .Z.src,
                                     alt: "<-"
                                 })
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                className: "text",
-                                children: "לסיפור שלנו"
                             })
                         ]
                     })
@@ -609,13 +628,14 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _public_images_home_section3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4265);
 /* harmony import */ var _sectionBg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7164);
-/* harmony import */ var _section2_module_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1331);
-/* harmony import */ var _section2_module_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_section2_module_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _section2_module_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1331);
+/* harmony import */ var _section2_module_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_section2_module_scss__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7037);
 /* harmony import */ var _public_images_button_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9246);
 /* harmony import */ var _youtube_embed__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4110);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_sectionBg__WEBPACK_IMPORTED_MODULE_4__]);
-_sectionBg__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(3015);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_sectionBg__WEBPACK_IMPORTED_MODULE_4__, swiper_react__WEBPACK_IMPORTED_MODULE_8__]);
+([_sectionBg__WEBPACK_IMPORTED_MODULE_4__, swiper_react__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -624,19 +644,23 @@ _sectionBg__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ?
 
 
 
+
+// Import Swiper Use
 
 function Section2() {
     const data = {
         "bgImage": _public_images_home_section3_jpg__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z
     };
     const videoID = "ymarrXoi0ZM";
+    // Swiper 
+    const swiper = (0,swiper_react__WEBPACK_IMPORTED_MODULE_8__.useSwiper)();
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_sectionBg__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                 data: data
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: `section-wrapper relative z-20 ${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_8___default().wrapper)}`,
+                className: `section-wrapper relative z-20 ${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_9___default().wrapper)}`,
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: "section-video",
@@ -645,24 +669,25 @@ function Section2() {
                         })
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
-                        className: `${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_8___default().button)}`,
+                        onClick: ()=>swiper.slideNext(),
+                        className: `${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_9___default().button)}`,
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                className: `flex items-center justify-center ${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_8___default().icon)}`,
+                                className: "text",
+                                children: "רוצים  לפגוש עוד סיפורים?"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                className: `flex items-center justify-center ${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_9___default().icon)}`,
                                 style: {
                                     backgroundImage: `url(${_public_images_button_bg_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src})`
                                 },
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                     width: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].width */ .Z.width,
                                     height: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].height */ .Z.height,
-                                    className: `inline-block ${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_8___default().image)}`,
+                                    className: `inline-block ${(_section2_module_scss__WEBPACK_IMPORTED_MODULE_9___default().image)}`,
                                     src: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].src */ .Z.src,
                                     alt: "<-"
                                 })
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                className: "text",
-                                children: "רוצים  לפגוש עוד סיפורים?"
                             })
                         ]
                     })
@@ -694,14 +719,17 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _public_images_home_section3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4265);
 /* harmony import */ var _sectionBg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7164);
-/* harmony import */ var _section3_module_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(770);
-/* harmony import */ var _section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _section3_module_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(770);
+/* harmony import */ var _section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7037);
 /* harmony import */ var _public_images_button_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9246);
 /* harmony import */ var _public_images_icon1_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8890);
 /* harmony import */ var _public_images_icon2_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1968);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_sectionBg__WEBPACK_IMPORTED_MODULE_4__]);
 _sectionBg__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -722,53 +750,59 @@ function Section3() {
                 data: data
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: `section-wrapper relative z-20 ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().wrapper)}`,
+                className: `section-wrapper relative z-20 ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().wrapper)}`,
                 children: [
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         className: "section-top",
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                                className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().title),
+                                className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().title),
                                 children: "אנחנו לא היינו הילדים היחידים שהתחבאו."
                             }),
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().content),
+                                className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().content),
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                    children: "אלו היו הסיפורים שלנו, שרה ורוז, כמונו היו אלפי ילדים, תינוקות, נערים ונערות מכל מיני מקומות. לכל אחד מהם היה סיפור משלו."
+                                    children: "אלו היו הסיפורים שלנו, שרה ורוז,כמונו היו אלפי ילדים, תינוקות, נערים ונערות מכל מיני מקומות. לכל אחד מהם היה סיפור משלו."
                                 })
                             }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
-                                className: `${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().button)}`,
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                        className: `flex items-center justify-center ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().icon)}`,
-                                        style: {
-                                            backgroundImage: `url(${_public_images_button_bg_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src})`
-                                        },
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            width: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].width */ .Z.width,
-                                            height: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].height */ .Z.height,
-                                            className: `inline-block ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().image)}`,
-                                            src: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].src */ .Z.src,
-                                            alt: "<-"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                        className: "text",
-                                        children: "רוצים  לפגוש עוד סיפורים?"
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: `${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().button)}`,
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_9___default()), {
+                                    href: "/story",
+                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
+                                        className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().link),
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                className: "text",
+                                                children: "רוצים  לפגוש עוד סיפורים?"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                className: `flex items-center justify-center ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().icon)}`,
+                                                style: {
+                                                    backgroundImage: `url(${_public_images_button_bg_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src})`
+                                                },
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                                    width: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].width */ .Z.width,
+                                                    height: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].height */ .Z.height,
+                                                    className: `inline-block ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().image)}`,
+                                                    src: _public_images_arrow_left_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"].src */ .Z.src,
+                                                    alt: "<-"
+                                                })
+                                            })
+                                        ]
                                     })
-                                ]
+                                })
                             })
                         ]
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: `flex flex-row-reverse p-5 items-center rounded ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoBox)}`,
+                        className: `flex p-5 items-center rounded ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoBox)}`,
                         children: [
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: `w-3/6 ml-5 ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().right)}`,
+                                className: `w-3/6 ml-5 ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().right)}`,
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                                        className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().subtitle),
+                                        className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().subtitle),
                                         children: "שימו לב!"
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
@@ -777,48 +811,48 @@ function Section3() {
                                 ]
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: `w-3/6 ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().left)}`,
+                                className: `w-3/6 ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().left)}`,
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoWrapper),
+                                        className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoWrapper),
                                         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
-                                            className: `flex items-center justify-end rounded mb-2.5 w-full bg-white hover:bg-stone-200 transition-all ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoButton)}`,
+                                            className: `flex items-center justify-start rounded mb-2.5 w-full bg-white hover:bg-stone-200 transition-all ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoButton)}`,
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                    className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoText),
-                                                    children: "עדויות של ניצולים"
-                                                }),
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                    className: `flex items-center justify-center ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoIcon)}`,
+                                                    className: `flex items-center justify-center ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoIcon)}`,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                                         width: _public_images_icon1_png__WEBPACK_IMPORTED_MODULE_7__/* ["default"].width */ .Z.width,
                                                         height: _public_images_icon1_png__WEBPACK_IMPORTED_MODULE_7__/* ["default"].height */ .Z.height,
-                                                        className: `inline-block ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoImage)}`,
+                                                        className: `inline-block ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoImage)}`,
                                                         src: _public_images_icon1_png__WEBPACK_IMPORTED_MODULE_7__/* ["default"].src */ .Z.src,
                                                         alt: "“"
                                                     })
+                                                }),
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoText),
+                                                    children: "עדויות של ניצולים"
                                                 })
                                             ]
                                         })
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoWrapper),
+                                        className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoWrapper),
                                         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
-                                            className: `flex items-center justify-end rounded w-full bg-white hover:bg-stone-200 transition-all ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoButton)}`,
+                                            className: `flex items-center justify-start rounded w-full bg-white hover:bg-stone-200 transition-all ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoButton)}`,
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                    className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoText),
-                                                    children: "שאלות לסקרנים"
-                                                }),
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                    className: `flex items-center justify-center ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoIcon)}`,
+                                                    className: `flex items-center justify-center ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoIcon)}`,
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                                         width: _public_images_icon2_png__WEBPACK_IMPORTED_MODULE_8__/* ["default"].width */ .Z.width,
                                                         height: _public_images_icon2_png__WEBPACK_IMPORTED_MODULE_8__/* ["default"].height */ .Z.height,
-                                                        className: `inline-block ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_9___default().infoImage)}`,
+                                                        className: `inline-block ${(_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoImage)}`,
                                                         src: _public_images_icon2_png__WEBPACK_IMPORTED_MODULE_8__/* ["default"].src */ .Z.src,
                                                         alt: "“"
                                                     })
+                                                }),
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_section3_module_scss__WEBPACK_IMPORTED_MODULE_10___default().infoText),
+                                                    children: "שאלות לסקרנים"
                                                 })
                                             ]
                                         })

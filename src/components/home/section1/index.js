@@ -7,11 +7,15 @@ import arrow from '../../../../public/images/arrow-left.png';
 import bgImage from '../../../../public/images/home-section2.jpg';
 import buttonBg from '../../../../public/images/button-bg.png';
 import SectionBg from '../sectionBg';
+// Import Swiper Use
+import { useSwiper } from 'swiper/react';
 
 function Section1() {
     const bgData = {
         "bgImage": bgImage
     }
+    // Swiper 
+    const swiper = useSwiper();
   return (
     <>
         <SectionBg data={bgData} />
@@ -20,14 +24,16 @@ function Section1() {
             <div className={styles.content} >
                 <p>אנחנו רוז ושרה. יש לנו סיפור מיוחד שאנחנו מתרגשות לספר. הוא מתחיל על האניה בדרך לארץ ישראל...</p>
             </div>
-            <button className={`${styles.button}`}>
+            <button 
+            onClick={() => swiper.slideNext()}
+            className={`${styles.button}`}>
+                <span className='text'>לסיפור שלנו</span>
                 <span className={`flex items-center justify-center ${styles.icon}`} style={{backgroundImage: `url(${buttonBg.src})`}}>
                     <Image 
                     width={arrow.width}
                     height={arrow.height}
                     className={`inline-block ${styles.image}`} src={arrow.src} alt="<-" />
                 </span>
-                <span className='text'>לסיפור שלנו</span>
             </button>
         </div>
     </>

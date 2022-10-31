@@ -666,31 +666,6 @@ Document[_constants.NEXT_BUILTIN_DOCUMENT] = InternalFunctionDocument; //# sourc
 
 /***/ }),
 
-/***/ 676:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({
-    value: true
-}));
-exports["default"] = isError;
-exports.getProperError = getProperError;
-var _isPlainObject = __webpack_require__(8524);
-function isError(err) {
-    return typeof err === "object" && err !== null && "name" in err && "message" in err;
-}
-function getProperError(err) {
-    if (isError(err)) {
-        return err;
-    }
-    if (false) {}
-    return new Error((0, _isPlainObject).isPlainObject(err) ? JSON.stringify(err) : err + "");
-}
-
-//# sourceMappingURL=is-error.js.map
-
-/***/ }),
-
 /***/ 5955:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -819,7 +794,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(3105));
+var __webpack_exports__ = __webpack_require__.X(0, [676], () => (__webpack_exec__(3105)));
 module.exports = __webpack_exports__;
 
 })();

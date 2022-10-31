@@ -10,6 +10,10 @@ import float2 from '../../../../public/images/bg-float2.png';
 import float3 from '../../../../public/images/bg-float3.png';
 import bgMask from '../../../../public/images/bg-mask1.png';
 import LandingBg from '../landingBg';
+import { gsap } from 'gsap'
+import { SplitText } from 'gsap/dist/ScrollTrigger'
+// Import Swiper Use
+import { useSwiper } from 'swiper/react';
 
 function Landing() {
     const bgData = {
@@ -19,9 +23,12 @@ function Landing() {
         "float3": float3,
         "bgMask": bgMask
     }
-    function nextSection() {
 
-    }
+    // Swiper 
+    const swiper = useSwiper();
+
+    // GSAP Split text
+    //gsap.registerPlugin(SplitText);
 
   return (
     <>
@@ -51,7 +58,7 @@ function Landing() {
             initial={{ opacity: 0, y: "100%" }}
             animate={{ opacity: 1, y: "0%" }} 
             transition={{duration: 0.5 }}
-            onClick={() => nextSection()}
+            onClick={() => swiper.slideNext()}
             className={`next-section ml-auto mr-auto flex items-center justify-center bg-white w-12 h-12 md:w-10 md:h-10 text-center rounded-full ${styles.button}`}>
                 <Image 
                 width={arrow.width}
