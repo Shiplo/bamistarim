@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://_N_E/src/components/layout/layout.module.scss"],"names":[],"mappings":"AAAA,sBACI,aAAA,CAEJ,sBACI,aAAA","file":"static/css/c1f38165077125f1.css","sourcesContent":[".dirRtl {\n    direction: rtl;\n}\n.dirLtr {\n    direction: ltr;\n}"],"sourceRoot":""}

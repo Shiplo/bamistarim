@@ -9,6 +9,8 @@ import story1 from '../public/images/story1.png'
 import story2 from '../public/images/story2.png'
 import story3 from '../public/images/story3.png'
 import story4 from '../public/images/story4.png'
+import play from '../public/images/play.svg'
+import curve from '../public/images/curve-text.svg'
 
 
 export default function Index() {
@@ -23,6 +25,7 @@ export default function Index() {
     let cards = section.querySelectorAll('.flip-box');
     //console.log(sections);
     // Animation
+    console.log(cards);
 
     cards.forEach((el) => {
       el.addEventListener("mouseenter", () => animateCard(el));
@@ -50,8 +53,8 @@ export default function Index() {
     <Layout header='show' footer='hide' mainDir='ltr'>
       <section 
       style={{backgroundImage: `url(${bgImage.src})`}}
-      className={`vertical-wrapper h-screen w-screen flex flex-nowrap flex-row-reverse ${styles.container}`}>
-        <div ref={flipSection} className={`v-section h-full w-screen flex content-center overflow-hidden justify-center ${styles.color1} ${styles.section}`}>
+      className={`vertical-wrapper h-screen w-screen flex items-center justify-center ${styles.container}`}>
+        <div ref={flipSection} className={`v-section h-full w-full flex justify-center items-center ${styles.flipWrapper}`}>
           <div className='flip-box'>
             <img src={story1.src} alt={'Story 1'} />
           </div>
@@ -65,8 +68,14 @@ export default function Index() {
             <img src={story4.src} alt={'Story 4'} />
           </div>
         </div>
-        <h2>Story One</h2>
-        <Link href={'/'}>Home Page</Link>
+        <div className={`absolute ${styles.buttonWrapper}`}>
+          <button className={`${styles.flipButton} relative z-20 rounded-full bg-white`}>
+            <img src={play.src} alt="Play" />
+          </button>
+          <div className={`${styles.curveText} transition-all z-10 absolute`}>
+            <img src={curve.src} alt="Curve Text" />
+          </div>
+        </div>
       </section>
     </Layout>
   )
