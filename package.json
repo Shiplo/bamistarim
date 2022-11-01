@@ -1,6 +1,6 @@
 {
   "name": "bamistarim",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
+    "@next/swc-darwin-arm64": "^12.3.1",
     "framer-motion": "^7.6.1",
     "graphql": "^16.6.0",
     "gsap": "^3.11.3",

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './header.module.scss';
 import logo from '../../../../public/images/logo-black.svg'
 import SoundIcon from '../../icons/soundIcon';
@@ -28,7 +29,10 @@ function Header() {
       <div className={`${styles.logo} mt-auto`}>
         <Link href={'/'}>
          <a>
-          <img src={logo.src} alt={'Logo'} />
+          <Image 
+          width={logo.width}
+          height={logo.height}
+          src={logo.src} alt={'Logo'} />
          </a>
         </Link>
       </div>

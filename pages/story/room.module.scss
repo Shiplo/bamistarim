@@ -1,0 +1,11 @@
+@import "../../src/styles/variables.module.scss";
+.container {
+    width: 400vw;
+    direction: ltr;
+
+	.section {
+		direction: rtl;
+		height: 100vh;
+        padding-right: 100px;
+	}
+}

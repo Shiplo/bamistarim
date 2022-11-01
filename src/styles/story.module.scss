@@ -29,10 +29,14 @@
 			text-align: center;
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
 			
-			img {
+			span {
 				display: inline-block;
 				position: relative;
 				transform: translateX(5px);
+
+				img {
+					display: block;
+				}
 			}
 
 			&:after {
@@ -53,8 +57,11 @@
 			width: 160%;
 			height: auto;
 			margin-right: -23px;
-			margin-bottom: -5px;
+			margin-bottom: -10px;
 
+			span {
+				display: block;
+			}
 			img {
 				display: block;
 			}

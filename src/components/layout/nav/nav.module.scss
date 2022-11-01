@@ -1,9 +1,9 @@
 @import "../../../styles/variables.module.scss";
 
 .nav {
-
+    display: block;
     .navList {
-
+        list-style: none;
         li {
             a {
                 width: 34px;
@@ -22,6 +22,12 @@
                         .tiptext {
                             opacity: 1;
                         }
+                    }
+                }
+                &.active {
+                    .hover {
+                        transform: scale(1);
+                        opacity: 1;
                     }
                 }
             }
