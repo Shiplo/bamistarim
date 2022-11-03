@@ -1,6 +1,7 @@
+import { BREAK } from 'graphql'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from './nav.module.scss'
 
 function Nav() {
@@ -47,21 +48,32 @@ function Nav() {
     // Use 
     const router = useRouter();
     //console.log(router);
+    useEffect(() => {
+        let nodes = Array.prototype.slice.call( document.getElementById("menu").children )
+        let active = document.getElementById("menu").querySelectorAll('.active')[0];
+        let index = 0;
+        console.log(nodes.indexOf(active));
+        nodes.map((item) => {
+            if(index < nodes.indexOf(active)) {
+                item.classList.add("wasActive");
+            }
+            index++;
+        });
+    })
+
   return (
     <nav className={`${styles.nav}`} id="nav-menu">
-        <ul className={`${styles.navList} menu relative`}>
-            {menuItems.map((item) => {
-                if(item.link != router.asPath) {
-                    console.log("wasActive");
-                } else {
-                    
-                }
+        <ul id="menu" 
+        className={`${styles.navList} menu relative`}>
+            {menuItems?.map((item) => {
                 return(
-                <li className='z-30 relative' key={item.id}>
+                <li
+                className={`z-30 relative ${(item.link == router.asPath && "active")}`} 
+                key={item.id}>
                     <Link href={item.link} >
-                        <a className={`block relative ${(item.link == router.asPath ? styles.active : "")}`}>
+                        <a className={`block relative ${(item.link == router.asPath && styles.active)}`}>
                             <span className={`${styles.marker} block rounded-full z-10 transition-all absolute left-2/4 top-2/4`}></span>
-                            <span className={`${styles.hover} block rounded-full z-20 transition-all absolute w-full h-full top-0 right-0`}>
+                            <span className={`${styles.hover} hover block rounded-full z-20 transition-all absolute w-full h-full top-0 right-0`}>
                                 <span className={'absolute block rounded-full'} style={{borderColor: item.color}}></span>
                             </span>
                             <span 

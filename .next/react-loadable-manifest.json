@@ -1,1 +1,80 @@
-{}
+{
+  "../node_modules/react-player/lazy/ReactPlayer.js -> ./Preview": {
+    "id": 7284,
+    "files": [
+      "static/chunks/reactPlayerPreview.426be1c4eb0d8fe2.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./DailyMotion": {
+    "id": 5134,
+    "files": [
+      "static/chunks/reactPlayerDailyMotion.7e1a516307668392.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Facebook": {
+    "id": 6429,
+    "files": [
+      "static/chunks/reactPlayerFacebook.31dbcca512b2f445.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./FilePlayer": {
+    "id": 3364,
+    "files": [
+      "static/chunks/reactPlayerFilePlayer.f0c755a7ee5670b0.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Kaltura": {
+    "id": 9289,
+    "files": [
+      "static/chunks/reactPlayerKaltura.2147cc9994123fa2.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Mixcloud": {
+    "id": 9734,
+    "files": [
+      "static/chunks/reactPlayerMixcloud.ff290a8167a955d1.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./SoundCloud": {
+    "id": 6655,
+    "files": [
+      "static/chunks/reactPlayerSoundCloud.4c714b80242cc38b.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Streamable": {
+    "id": 6479,
+    "files": [
+      "static/chunks/reactPlayerStreamable.5eb11445f33c0536.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Twitch": {
+    "id": 9743,
+    "files": [
+      "static/chunks/reactPlayerTwitch.8df55f971d3b8e13.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Vidyard": {
+    "id": 7287,
+    "files": [
+      "static/chunks/reactPlayerVidyard.77c85a5dfe30160f.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Vimeo": {
+    "id": 6746,
+    "files": [
+      "static/chunks/reactPlayerVimeo.52427a8852b6c51c.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./Wistia": {
+    "id": 3134,
+    "files": [
+      "static/chunks/reactPlayerWistia.90702de1d00df7ce.js"
+    ]
+  },
+  "../node_modules/react-player/lazy/players/index.js -> ./YouTube": {
+    "id": 5034,
+    "files": [
+      "static/chunks/reactPlayerYouTube.9ded0f5d84a84baa.js"
+    ]
+  }
+}

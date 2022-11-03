@@ -1,15 +1,57 @@
+@import '../../../styles/variables.module.scss';
+
 .wrapper {
     width: 1260px;
     max-width: 90%;
     margin: auto 0px;
 
+    .video {
+        button {
+            background-color: #808080;
+            border: 2px solid #383635;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            margin-top: -50px;
+
+            &:hover {
+                background-color: $secondaryColor;
+            }
+
+            span {
+                display: block;
+                vertical-align: middle;
+                left: 2px;
+            }
+
+            img {
+                display: block;
+            }
+        }
+        .caption {
+            font-size: 30px;
+            line-height: 35px;
+            text-align: right;
+            max-width: 50%;
+            bottom: 80px;
+            right: 50px;
+        }
+        &:hover {
+            .captionWrapper {
+                opacity: 1;
+            }
+        }
+    }
+
+    .magnetic {
+        margin-top: 1vh;
+    }
     .button {
         display: flex;
         margin-right: auto;
         font-size: 28px;
         line-height: 35px;
         color: #223A57;
-        margin-top: 5vh;
         align-items: center;
 
         .icon {
@@ -40,6 +82,18 @@
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .wrapper {
+        .video {
+            button {
+                width: 70px;
+                height: 70px;
+                margin-left: -35px;
+                margin-top: -35px;
+            }
+            .caption {
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
         .button {
             font-size: 22px;
             line-height: 30px;

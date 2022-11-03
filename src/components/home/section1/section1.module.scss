@@ -8,13 +8,16 @@
     padding: 10%;
     margin-top: 0;
 
+    .magnetic {
+        margin-top: 3vh;
+    }
+
     .button {
         display: flex;
         margin-left: auto;
         font-size: 28px;
         line-height: 35px;
         color: #223A57;
-        margin-top: 5vh;
         align-items: center;
 
         .icon {

@@ -1,28 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   swcMinify: true,
 }
 
 module.exports = nextConfig
 
-module.exports = {
-  exportPathMap: async function(
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      "/": { page: "/" },
-      "/story": { page: "/story" },
-      "/about": { page: "/about" },
-      "/single": { page: "/single" }
-    };
-  }
-};
-
 const path = require('path')
 module.exports = {
+  //basePath: '/front-end',
   images: {
+    unoptimized: true,
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,

@@ -108,3 +108,14 @@ body::-webkit-scrollbar-thumb{
       opacity: 0;
     }
   }
+
+/*====================================
+          Nav Menu
+======================================*/
+#nav-menu #menu li.wasActive {
+  a {
+      .hover {
+          opacity: 1;
+      }
+  }
+}

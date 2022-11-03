@@ -53,7 +53,7 @@ export default function Index() {
     <Layout header='show' footer='hide' mainDir='ltr'>
       <section 
       style={{backgroundImage: `url(${bgImage.src})`}}
-      className={`vertical-wrapper h-screen w-screen flex items-center justify-center ${styles.container}`}>
+      className={`vertical-wrapper bg-cover bg-no-repeat bg-center h-screen w-screen flex items-center justify-center ${styles.container}`}>
         <div ref={flipSection} className={`v-section h-full w-full flex justify-center items-center ${styles.flipWrapper}`}>
           <div className='flip-box'>
             <Image 
